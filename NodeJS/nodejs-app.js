@@ -5,10 +5,11 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
+var user_routes = require('./routes/user');
 var http = require('http')
     , path = require('path')
-    , fs = require('fs');
+    , fs = require('fs')
+    , Users = require('./model/Users.js');
 
 var app = express();
 
@@ -28,8 +29,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+//
+// Not sure why these are here yet...
+//
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/users', user_routes.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

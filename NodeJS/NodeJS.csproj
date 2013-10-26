@@ -17,7 +17,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="form.html" />
-    <TypeScriptCompile Include="lib\testdb.ts" />
+    <Content Include="lib\accessdb.js" />
+    <Content Include="model\Users.js" />
     <Content Include="nodejs-app.js" />
     <Content Include="public\stylesheets\style.css" />
     <Content Include="routes\index.js" />
