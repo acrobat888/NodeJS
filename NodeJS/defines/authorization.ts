@@ -1,5 +1,5 @@
-///<reference path='node.d.ts' />
-///<reference path='express.d.ts' />
+///<reference path="node.d.ts" />
+///<reference path="express.d.ts" />
 
 import config = module("config");
 import express = module("express");

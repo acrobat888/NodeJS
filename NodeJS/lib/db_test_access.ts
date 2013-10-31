@@ -1,7 +1,7 @@
 
 // Utilities
-/// <reference path="../defines/node.ts" />
-/// <reference path="../defines/mongoose.ts" />
+/// <reference path="../defines/node.d.ts" />
+/// <reference path="../defines/mongoose.d.ts" />
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
