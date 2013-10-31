@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodeJS", "NodeJS\NodeJS.csproj", "{784D3B14-6F45-4B98-A51B-10933592FDDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2", "Chapter2\Chapter2.csproj", "{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{784D3B14-6F45-4B98-A51B-10933592FDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{784D3B14-6F45-4B98-A51B-10933592FDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{784D3B14-6F45-4B98-A51B-10933592FDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
