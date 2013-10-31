@@ -20,7 +20,7 @@
     <None Include="defines\node.d.ts" />
     <Content Include="form.html" />
     <TypeScriptCompile Include="lib\db_test_access.ts" />
-    <Content Include="model\Users.js" />
+    <TypeScriptCompile Include="model\Users.ts" />
     <Content Include="nodejs-app.js" />
     <Content Include="public\stylesheets\style.css" />
     <Content Include="routes\index.js" />

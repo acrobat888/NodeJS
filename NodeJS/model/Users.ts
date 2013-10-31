@@ -1,16 +1,17 @@
 //  Typescript source code
+
 var db = require('../lib/db_test_access');
 
 var UserSchema = new db.Schema({
-    username: { type: String, unique: true },
-    password: String
-});
+    username: { type: String, unique: true }
+    , password: String
+})
 
 var MyUser = db.mongoose.model('Users', UserSchema);
 
 //
 // Exports
-//
+// 
 module.exports.addUser = addUser;
 
 //
@@ -29,4 +30,3 @@ function addUser(username, password, callback) {
         }
     });
 }
-//# sourceMappingURL=Users.js.map
