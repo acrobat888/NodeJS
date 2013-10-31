@@ -16,8 +16,12 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+	<TypeScriptCompile Include="defines\authorization.ts" />
+    <TypeScriptCompile  Include="defines\express.d.ts" />
+    <TypeScriptCompile  Include="defines\mongoose.d.ts" />
+    <TypeScriptCompile  Include="defines\node.d.ts" />
     <Content Include="form.html" />
-    <Content Include="lib\accessdb.js" />
+    <TypeScriptCompile  Include="lib\db_test_access.ts" />
     <Content Include="model\Users.js" />
     <Content Include="nodejs-app.js" />
     <Content Include="public\stylesheets\style.css" />
@@ -40,6 +44,9 @@
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
   </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Exec Command="&quot;$(PROGRAMFILES)\Microsoft SDKs\TypeScript\tsc&quot; -target ES5 @(TypeScriptCompile ->'&quot;%(fullpath)&quot;', ' ')" IgnoreExitCode="true" />
+  </Target>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
