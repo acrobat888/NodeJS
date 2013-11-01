@@ -36,7 +36,7 @@ function createExchange(exchangeData)
             exchange[orderType] = {};
             exchange[orderType].volumes = {};
 
-            var options = {};
+            var options = {max: false};
             if (BUY == orderType)
             {
                 //

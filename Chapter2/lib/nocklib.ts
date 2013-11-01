@@ -11,7 +11,7 @@ var exchange = require('./exchange'),
 
 module.exports = {
     generateRandomOrder: function (exchangeData) {
-        var order = {};
+        var order = {type: "", price: 0, volume: 0};
         if (Math.random() > 0.5)
             order.type = exchange.BUY
         else

@@ -16,10 +16,10 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="lib\binaryheap.ts" />
-    <Content Include="lib\exchange.ts" />
-    <Content Include="lib\nocklib.ts" />
-    <Content Include="test\exchange_test.ts" />
+    <TypeScriptCompile Include="lib\binaryheap.ts" />
+    <TypeScriptCompile Include="lib\exchange.ts" />
+    <TypeScriptCompile Include="lib\nocklib.ts" />
+    <None Include="test\exchange_test.ts" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
