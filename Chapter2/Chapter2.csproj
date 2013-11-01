@@ -18,6 +18,7 @@
   <ItemGroup>
     <Content Include="lib\binaryheap.ts" />
     <Content Include="lib\exchange.ts" />
+    <Content Include="lib\nocklib.ts" />
     <Content Include="test\exchange_test.ts" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -29,6 +30,9 @@
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
