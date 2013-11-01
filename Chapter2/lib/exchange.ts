@@ -3,7 +3,7 @@
 //
 'use strict';
 
-var $ = require('jquery'),
+var clone = require('clone'),           // *** BUG WITH JQUERY ***  $ = require('jquery'),
     binaryheap = require('./binaryheap');
 
 var BUY = "buys",
@@ -20,7 +20,8 @@ function createBinaryHeap(orderType)
 function createExchange(exchangeData)
 {
 
-    var cloned = $.extend(true, {}, exchangeData);
+    ///  *** BVUG WITH JQUERY &****  var cloned = $.extend(true, {}, exchangeData);
+    var cloned = clone(exchangeData);
 
     cloned.trades = [];
     init(cloned, BUY);

@@ -20,6 +20,7 @@
     <TypeScriptCompile Include="lib\exchange.ts" />
     <TypeScriptCompile Include="lib\nocklib.ts" />
     <None Include="test\exchange_test.ts" />
+    <TypeScriptCompile Include="pricefeed.ts" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
