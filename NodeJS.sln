@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodeJS", "NodeJS\NodeJS.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2", "Chapter2\Chapter2.csproj", "{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypescriptPlayground", "TypescriptPlayground\TypescriptPlayground.csproj", "{33814498-50DD-48EC-81B5-1AC62F8E1086}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DE7FA6D-9C62-4018-9879-B52BDF8394FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33814498-50DD-48EC-81B5-1AC62F8E1086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33814498-50DD-48EC-81B5-1AC62F8E1086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33814498-50DD-48EC-81B5-1AC62F8E1086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33814498-50DD-48EC-81B5-1AC62F8E1086}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
