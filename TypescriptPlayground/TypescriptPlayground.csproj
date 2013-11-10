@@ -18,6 +18,8 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="default.htm" />
+    <Content Include="tabletest2.html" />
+    <Content Include="tabletest3.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
