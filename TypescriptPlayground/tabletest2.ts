@@ -45,6 +45,42 @@ var gStartTag: string = "<TABLE id='mainTable'><TBODY><TR><TD style=\"WIDTH: 120
     gEndTag: string = "</TBODY></TABLE>";
 
 // 
+// Module
+class TableManager {
+    mCurrDocument: Document;
+    mTRContents: NodeList;
+    mNewTable: string;
+    
+    // Constructor
+    constructor(inDocument: Document) {
+        this.mCurrDocument = inDocument;
+        this.mTRContents = inDocument.body.getElementsByTagName('TR');
+        this.mNewTable = "";
+    }
+
+    initialize()
+    {
+        if (this.mTRContents.length > 1)
+        {
+            for (var i: number = 1; i < this.mTRContents.length; i++)
+            {
+                if ((<HTMLElement>this.mTRContents[i]).innerHTML)
+                {
+                    // Add previous rows
+                    this.mNewTable += "<TR>";
+                    this.mNewTable += (<HTMLElement>this.mTRContents[i]).innerHTML;
+                    this.mNewTable += "</TR>";
+                }
+            }
+        }
+    }
+
+    udpate(inNewTable: string) {
+        document.getElementById('tableDiv').innerHTML = inNewTable;
+    }
+}
+
+// 
 // Function adds a name to the list after clicking 'Add'
 //
 function CmdAdd_onclick()
@@ -98,9 +134,10 @@ function CmdInit_onclick() {
 
     var trContents;
 
-    //Get the row contents
-
     trContents = document.body.getElementsByTagName('TR');
+
+    //Get the row contents
+    var currTable: TableManager = new TableManager(document);
 
     if (trContents.length > 1) {
         for (var i:number = 1; i < trContents.length; i++) {
