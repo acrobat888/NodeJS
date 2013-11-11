@@ -20,7 +20,7 @@ module.exports = {
         var buyExists = exchangeData.buys && exchangeData.buys.prices.peek();
         var sellExists = exchangeData.sells && exchangeData.sells.prices.peek();
 
-        number ran = Math.random();
+        var ran:number = Math.random();
         if (!buyExists && !sellExists)
             order.price = Math.floor(ran * priceRange) + priceFloor;
         else if (buyExists && sellExists)
