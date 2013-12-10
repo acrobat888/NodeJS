@@ -24,6 +24,32 @@ function submitRandomOrder() {
     else
         exchangeData = exch.sell(order.price, order.volume, exchangeData);
 
+    db.insertOne('transactions', order, function (error, outOrder) {
+        if (exchangeData.trades && exchangeData.trades.length > 0) {
+            var trades = exchangeData.trades.map(function (trade) {
+                trade.init = (order.type == exch.BUY) ? 'b' : 's';
+                return trade;
+            });
+
+            // Now insert into the db
+            db.insert('transactions', trades, function (error, trades) {
+                pauseThenTrade();
+            });
+        }
+        else
+            pauseThenTrade();
+    });
+
+    function pauseThenTrade() {
+        // Get the lenght of the pause
+        var pause = Math.floor(Math.random() * timeRange) + timeFloor;
+
+        setTimeout(submitRandomOrder, pause);
+
+        console.log(exch.getDisplay(exchangeData));
+    }
+
+
     var pause = Math.floor(Math.random() * timeRange) + timeFloor;
 
     setTimeout(submitRandomOrder, pause);

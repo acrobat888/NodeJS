@@ -14,7 +14,9 @@ var db = new mongoDb('nockmarket',
     new mongoServer(host, port, {}),
     { native_parser: false });
 
+
 module.exports = {
+
     find: function (name, query, limit, callback) {
         db.collection(name).find(query)
             .sor({ _id: -1 })

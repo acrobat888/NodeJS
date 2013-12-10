@@ -19,6 +19,9 @@
     <Content Include="app.css" />
     <Content Include="default.htm" />
     <TypeScriptCompile Include="lib\binaryheap.ts" />
+    <Content Include="dnode\auth.js" />
+    <None Include="dnode\auth.ts" />
+    <None Include="dnode\web.ts" />
     <Content Include="lib\db.ts" />
     <TypeScriptCompile Include="lib\exchange.ts" />
     <TypeScriptCompile Include="lib\nocklib.ts" />
