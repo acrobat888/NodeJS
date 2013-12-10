@@ -1,0 +1,19 @@
+﻿body
+{
+    font-family: 'Segoe UI', sans-serif
+}
+
+span {
+    font-style: italic
+}
+
+table
+{
+border-collapse:collapse;
+}
+
+table,th,td
+{
+border:1px solid black;
+color: green
+}

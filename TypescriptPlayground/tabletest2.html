@@ -1,79 +1,49 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml" >
 
 <head runat="server">
-
-<title>Dynamic Table</title>
-
-<script language="javascript" type="text/javascript" src="tabletest2.js"></script>
-
-<style>
-table
-{
-border-collapse:collapse;
-}
-
-table,th,td
-{
-border:1px solid black;
-color: green
-}
-</style>
-
+    <title>Dynamic Table</title>
+    <script language="javascript" type="text/javascript" src="tabletest2.js"></script>
+    <link rel="stylesheet" href="app.css" type="text/css" />
 </head>
 
 <body>
 
-<form id="form1" runat="server">
+    <form id="form1" runat="server">
 
-<div>
+    <div>
 
-<br />
+    <br />
+    <label>UserID</label> 
+    <input id="userid" type="text" /><br />
 
-<label>UserID</label> 
+    <label>UserName</label> 
+    <input id="username" type="text" /><br />
 
-<input id="userid" type="text" /><br />
+    <label>Department</label> 
+    <input id="department" type="text" />
 
-<label>UserName</label> 
+    </div>
 
-<input id="username" type="text" /><br />
+    <div>
+        <center>
+            <input id="CmdAdd" type="button" value="Add" onclick="return CmdAdd_onclick()" />
+            <input id="CmdInit" type="button" value="Init" onclick="return CmdInit_onclick()" />
+            <input id="CmdCollapse" type="button" value="Collapse" onclick="return CmdCollapse_onclick()" />
+            <input type="checkbox" name="testCheckB"/>
+        </center>
+    </div>
 
-<label>Department</label> 
-
-<input id="department" type="text" />
-
-</div>
-
-<div>
-<center>
-
-<input id="CmdAdd" type="button" value="Add" onclick="return CmdAdd_onclick()" />
-<input id="CmdInit" type="button" value="Init" onclick="return CmdInit_onclick()" />
-<input type="checkbox" name="testCheckB"/>
-
-</center>
-</div>
-
-<div id="tableDiv" style="text-align:center" >
-
-<table id="mainTable">
-
-<tr style="width:120px " >
-
-<td >User ID</td>
-
-<td>User Name</td>
-
-<td>Department</td>
-
-<td>Select</td>
-</tr>
-
-</table>
-
-</div>
+    <div id="tableDiv" style="text-align:center" >
+        <table id="mainTable">
+            <tr style="width:120px " >
+                <td >User ID</td>
+                <td>User Name</td>
+                <td>Department</td>
+                <td>Select</td>
+            </tr>
+        </table>
+    </div>
 
 </form>
-
 </body>
-
 </html>

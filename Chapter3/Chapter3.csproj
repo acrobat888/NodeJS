@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{33814498-50DD-48EC-81B5-1AC62F8E1086}</ProjectGuid>
+    <ProjectGuid>{E63C805C-FB1F-441A-9065-81AA21359768}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
@@ -18,16 +18,18 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="default.htm" />
-    <Content Include="tabletest2.css" />
-    <Content Include="tabletest2.html" />
-    <TypeScriptCompile Include="tabletest2.ts" />
-    <Content Include="tabletest3.html" />
+    <Content Include="lib\binaryheap.ts" />
+    <Content Include="lib\exchange.ts" />
+    <Content Include="lib\nocklib.ts" />
+    <Content Include="nockmarket.ts" />
+    <Content Include="test\exchange_test.ts" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="package.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -40,7 +42,10 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>TypeScriptHTMLApp1</RootNamespace>
+    <RootNamespace>Chapter3</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>Chapter3</AssemblyName>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -50,9 +55,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>58609</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:37295/</IISUrl>
+          <IISUrl>http://localhost:58608/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

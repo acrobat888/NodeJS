@@ -30,16 +30,21 @@ var dist = p.getDist();
 // Global data
 //
 interface PeopleData {
+    checkbox: boolean;
     uid: string;
     name: string;
     dept: string;
-    checkbox: boolean;
+    master: boolean;
 }
 
-var gInitialData: Array<PeopleData> = [{ uid: "bp", name: "brad", dept: "engineering", checkbox: true },
-    { uid: "sl", name: "susan", dept: "law", checkbox: false },
-    { uid: "fmp", name: "frank", dept: "science", checkbox: true },
-    { uid: "sjp", name: "sadie", dept: "math", checkbox: false }];
+var gInitialData: Array<PeopleData> = [{ uid: "bp", name: "brad", dept: "engineering", checkbox: true, master: true },
+    { uid: "sl", name: "susan", dept: "law", checkbox: false, master: true },
+    { uid: "rl", name: "rosie", dept: "med-hair", checkbox: false, master: false },
+    { uid: "fmp", name: "frank", dept: "science", checkbox: true, master: true },
+    { uid: "nl", name: "nuria", dept: "short-hair", checkbox: false, master: false },
+    { uid: "sjp", name: "sadie", dept: "math", checkbox: false, master: true },
+    { uid: "sl", name: "seraphina", dept: "short-hair", checkbox: false, master: false }
+];
 
 var gStartTag: string = "<TABLE id='mainTable'><TBODY><TR><TD style=\"WIDTH: 120px\">User ID</TD><TD style=\"WIDTH: 120px\">User Name</TD><TD style=\"WIDTH: 120px\">Department</TD></TR>",
     gEndTag: string = "</TBODY></TABLE>";
@@ -180,4 +185,21 @@ function cmd_checkbox(chk_row) {
 
 }
 
+function CmdCollapse_onclick() {
+    var newTable: string = gStartTag;
+    var trContents;
+
+    //Get the row contents
+    trContents = document.body.getElementsByTagName('TR');
+
+    if (trContents.length > 1) {
+        for (var i = 1, rowIndex = 0; i < trContents.length; i++) {
+            if (trContents(i).style.height != "0") {
+                if (!gInitialData[rowIndex].master)
+                    trContents(i).style.height = 0;
+                rowIndex++;
+            }
+        }
+    }
+}
  
