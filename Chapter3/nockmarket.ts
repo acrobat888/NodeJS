@@ -8,6 +8,7 @@
 var exchangeData = {},
     exch = require('./lib/exchange'),
     nocklib = require('./lib/nocklib'),
+    db = require('./lib/db'),
     timeFloor = 500,
     timeRange = 1000;
 
@@ -29,4 +30,6 @@ function submitRandomOrder() {
     console.log(exch.getDisplay(exchangeData));
 }
 
-submitRandomOrder();
+db.open(function () {
+    submitRandomOrder();
+});

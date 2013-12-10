@@ -18,11 +18,13 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="default.htm" />
-    <Content Include="lib\binaryheap.ts" />
-    <Content Include="lib\exchange.ts" />
-    <Content Include="lib\nocklib.ts" />
-    <Content Include="nockmarket.ts" />
-    <Content Include="test\exchange_test.ts" />
+    <TypeScriptCompile Include="lib\binaryheap.ts" />
+    <Content Include="lib\db.ts" />
+    <TypeScriptCompile Include="lib\exchange.ts" />
+    <TypeScriptCompile Include="lib\nocklib.ts" />
+    <TypeScriptCompile Include="nockmarket.ts" />
+    <None Include="test\db_test.ts" />
+    <None Include="test\exchange_test.ts" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
