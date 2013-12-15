@@ -26,6 +26,9 @@ var p: IPoint = new Shapes.Point(3, 4);
 var dist = p.getDist();
 */
 
+/// <reference path="tables.ts" />
+
+
 //
 // Global data
 //
@@ -48,42 +51,6 @@ var gInitialData: Array<PeopleData> = [{ uid: "bp", name: "brad", dept: "enginee
 
 var gStartTag: string = "<TABLE id='mainTable'><TBODY><TR><TD style=\"WIDTH: 120px\">User ID</TD><TD style=\"WIDTH: 120px\">User Name</TD><TD style=\"WIDTH: 120px\">Department</TD></TR>",
     gEndTag: string = "</TBODY></TABLE>";
-
-// 
-// Module
-class TableManager {
-    mCurrDocument: Document;
-    mTRContents: NodeList;
-    mNewTable: string;
-    
-    // Constructor
-    constructor(inDocument: Document) {
-        this.mCurrDocument = inDocument;
-        this.mTRContents = inDocument.body.getElementsByTagName('TR');
-        this.mNewTable = "";
-    }
-
-    initialize()
-    {
-        if (this.mTRContents.length > 1)
-        {
-            for (var i: number = 1; i < this.mTRContents.length; i++)
-            {
-                if ((<HTMLElement>this.mTRContents[i]).innerHTML)
-                {
-                    // Add previous rows
-                    this.mNewTable += "<TR>";
-                    this.mNewTable += (<HTMLElement>this.mTRContents[i]).innerHTML;
-                    this.mNewTable += "</TR>";
-                }
-            }
-        }
-    }
-
-    udpate(inNewTable: string) {
-        document.getElementById('tableDiv').innerHTML = inNewTable;
-    }
-}
 
 // 
 // Function adds a name to the list after clicking 'Add'
@@ -142,7 +109,7 @@ function CmdInit_onclick() {
     trContents = document.body.getElementsByTagName('TR');
 
     //Get the row contents
-    var currTable: TableManager = new TableManager(document);
+    var currTable: tables.TableManager = new tables.TableManager(document);
 
     if (trContents.length > 1) {
         for (var i:number = 1; i < trContents.length; i++) {

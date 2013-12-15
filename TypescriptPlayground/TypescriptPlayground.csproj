@@ -18,6 +18,7 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="default.htm" />
+    <TypeScriptCompile Include="tables.ts" />
     <Content Include="tabletest2.css" />
     <Content Include="tabletest2.html" />
     <TypeScriptCompile Include="tabletest2.ts" />
@@ -40,7 +41,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>TypeScriptHTMLApp1</RootNamespace>
+    <RootNamespace>TypescriptPlayground</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
