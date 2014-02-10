@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{E63C805C-FB1F-441A-9065-81AA21359768}</ProjectGuid>
+    <ProjectGuid>{3941DFCD-D251-4800-970B-7AD81F7B9EE9}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
@@ -18,22 +18,22 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="default.htm" />
-    <TypeScriptCompile Include="lib\binaryheap.ts" />
     <TypeScriptCompile Include="dnode\auth.ts" />
     <TypeScriptCompile Include="dnode\web.ts" />
+    <TypeScriptCompile Include="lib\binaryheap.ts" />
     <TypeScriptCompile Include="lib\db.ts" />
     <TypeScriptCompile Include="lib\exchange.ts" />
     <TypeScriptCompile Include="lib\nocklib.ts" />
+    <Content Include="package.json" />
+    <Content Include="test\db_test.ts" />
+    <Content Include="test\exchange_test.ts" />
     <TypeScriptCompile Include="nockmarket.ts" />
-    <None Include="test\db_test.ts" />
-    <None Include="test\exchange_test.ts" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="package.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -46,10 +46,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>Chapter3</RootNamespace>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyName>Chapter3</AssemblyName>
+    <RootNamespace>Chapter4</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -59,9 +56,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58609</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58608/</IISUrl>
+          <IISUrl>http://localhost:17408/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -169,4 +169,12 @@ function CmdCollapse_onclick() {
         }
     }
 }
+
+function CmdSubmit_onclick() {
+    var fileLoad = (<HTMLInputElement> document.getElementById("FileLoad"));
+    var fileName: string = fileLoad.value;
+
+    console.log("FileName: ", fileName);
+}
+ 
  
