@@ -67,8 +67,27 @@ function submitRandomOrder() {
 
 var app = express.createServer();
 
+/*
+app.configure(function () {
+    app.set('views', __dirname + '/views');
+    app.set('view engine', 'ejs');
+    app.use(express.static(__dirname + '/public'));
+});
+
+app.set('view options', {
+    layout: false
+});
+*/
+
 app.get('/', function (request, result) {
     result.send('Hello World');
+
+    // 
+    // https://gist.github.com/3949958  -- move to /views/charts.ejs
+    // To render the results, undo this line and pull in
+    //
+    // res.render('chart');
+
 });
 
 app.get('/api/trades', function (request, result) {

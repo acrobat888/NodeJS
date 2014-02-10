@@ -19,7 +19,7 @@ module.exports = {
 
     find: function (name, query, limit, callback) {
         db.collection(name).find(query)
-            .sor({ _id: -1 })
+            .sort({ _id: -1 })
             .limit(limit)
             .toArray(callback);
     },
