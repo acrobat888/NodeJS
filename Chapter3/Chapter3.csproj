@@ -25,6 +25,7 @@
     <TypeScriptCompile Include="lib\exchange.ts" />
     <TypeScriptCompile Include="lib\nocklib.ts" />
     <TypeScriptCompile Include="nockmarket.ts" />
+    <Content Include="chart.ejs" />
     <None Include="test\db_test.ts" />
     <None Include="test\exchange_test.ts" />
     <Content Include="web.config" />
