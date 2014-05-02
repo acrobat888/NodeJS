@@ -15,6 +15,7 @@ var exchangeData: ExchangeDataType = {},
     nocklib = require('./lib/nocklib'),
     exch = require('./lib/exchange'),
     db = require('./lib/db'),
+    nockroutes = require('./routes/nockroutes.js'),
     timeFloor = 500,
     timeRange = 1000;
 
@@ -67,8 +68,22 @@ function submitRandomOrder() {
 
 var app = express.createServer();
 
-app.get('/', function (request, result) {
-    result.send('Hello World');
+app.configure(function () {
+    console.log("app.configure");
+    app.set('views', __dirname + '/views');
+    app.set('view engine', 'ejs');
+    app.use(express.static(__dirname + '/public'));
+});
+
+app.set('view options', {
+    layout: false
+});
+
+app.get('/', nockroutes.getIndex);
+
+app.get('/chart', function (request, result) {
+    // Only one result per json call
+    result.render('chart');
 });
 
 app.get('/api/trades', function (request, result) {

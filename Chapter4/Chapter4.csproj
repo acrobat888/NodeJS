@@ -25,6 +25,7 @@
     <TypeScriptCompile Include="lib\exchange.ts" />
     <TypeScriptCompile Include="lib\nocklib.ts" />
     <Content Include="package.json" />
+    <Content Include="routes\nockroutes.ts" />
     <Content Include="test\db_test.ts" />
     <Content Include="test\exchange_test.ts" />
     <TypeScriptCompile Include="nockmarket.ts" />
@@ -34,6 +35,9 @@
     <TypeScriptCompile Include="app.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="views\chart.ejs" />
+    <Content Include="views\index.ejs" />
+    <Content Include="views\portfolio.ejs" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
