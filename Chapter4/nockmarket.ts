@@ -24,7 +24,7 @@ function submitRandomOrder() {
     // order
     //
     var order = nocklib.generateRandomOrder(exchangeData);
-    console.log('order', order);
+    // console.log('order', order);
 
     if (order.type == exch.BUY)
         exchangeData = exch.buy(order.price, order.volume, exchangeData);
@@ -56,20 +56,21 @@ function submitRandomOrder() {
 
         setTimeout(null/*submitRandomOrder*/, pause);
 
-        console.log(exch.getDisplay(exchangeData));
+       // console.log('pause then trade of [exchangeData]:', exch.getDisplay(exchangeData));
     }
 
 
     var pause = Math.floor(Math.random() * timeRange) + timeFloor;
 
     setTimeout(submitRandomOrder, pause);
-    console.log(exch.getDisplay(exchangeData));
+    // console.log('getDisplay(exchangeData)', exch.getDisplay(exchangeData));
 }
 
-var app = express.createServer();
+var app = express();
 
 app.configure(function () {
     console.log("app.configure");
+    app.use(express.bodyParser());
     app.set('views', __dirname + '/views');
     app.set('view engine', 'ejs');
     app.use(express.static(__dirname + '/public'));
@@ -80,6 +81,12 @@ app.set('view options', {
 });
 
 app.get('/', nockroutes.getIndex);
+
+app.post('/signup', function (request, result) {
+    console.log("Called app.post with signup");
+
+    nockroutes.signup(request, result);
+});
 
 app.get('/chart', function (request, result) {
     // Only one result per json call

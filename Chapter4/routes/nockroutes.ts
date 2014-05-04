@@ -1,31 +1,24 @@
-/*
-// Interface
-interface IPoint {
-    getDist(): number;
-}
+//
+/// <reference path="../../NodeJS/defines/node.d.ts" />
 
-// Module
-module Shapes {
+'use strict';
 
-    // Class
-    export class Point implements IPoint {
-        // Constructor
-        constructor (public x: number, public y: number) { }
+var nocklib = require('../lib/nocklib');
 
-        // Instance member
-        getDist() { return Math.sqrt(this.x * this.x + this.y * this.y); }
+module.exports = {
+    getIndex: function (request, result) {
+        result.render('index');
+    },
 
-        // Static member
-        static origin = new Point(0, 0);
+    signup: function (request, result) {
+        console.log("Called signup function");
+
+        nocklib.createUser(request.body.username,
+            request.body.email,
+            request.body.password,
+            function (error, user) {
+                console.log('created user', user);
+                result.redirect('/portfolio');
+            });
     }
-
-}
-
-// Local variables
-var p: IPoint = new Shapes.Point(3, 4);
-var dist = p.getDist();
-*/
-
-export function getIndex(request, result) {
-    result.render('index');
 }

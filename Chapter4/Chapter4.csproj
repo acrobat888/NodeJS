@@ -25,7 +25,7 @@
     <TypeScriptCompile Include="lib\exchange.ts" />
     <TypeScriptCompile Include="lib\nocklib.ts" />
     <Content Include="package.json" />
-    <Content Include="routes\nockroutes.ts" />
+    <TypeScriptCompile Include="routes\nockroutes.ts" />
     <Content Include="test\db_test.ts" />
     <Content Include="test\exchange_test.ts" />
     <TypeScriptCompile Include="nockmarket.ts" />
