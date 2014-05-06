@@ -13,6 +13,9 @@
 declare var process: NodeProcess;
 declare var global: any;
 
+/*
+// This variable doesn't work with typescript 1.0 so just commented out
+//
 declare var console: {
     log(...data: any[]): void;
     info(...data: any[]): void;
@@ -23,6 +26,7 @@ declare var console: {
     trace(label: string): void;
     assert(expression: any, ...message: string[]): void;
 }
+*/
 
 declare var __filename: string;
 declare var __dirname: string;
